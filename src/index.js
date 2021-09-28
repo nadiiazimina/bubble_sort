@@ -1,10 +1,21 @@
-import "./styles.css";
+const bubble = (arr) => {
+  for(let i =0; i < arr.length; i++) {
+    for(let j = 0; j < arr.length - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        const temp = arr[j+ 1];
+        arr[j +1] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+}
+console.log(bubble([7,9,1,32,24,11]))
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+
+
+
+
+
+
+
